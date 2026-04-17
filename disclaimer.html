@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QBIO Token Disclaimer — Quantum Biology DAO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #EEE8DF;
+      --cream-dim: #E5DED2;
+      --purple-dark: #2D1B30;
+      --purple-mid: #4A2E4E;
+      --purple-light: #7D4A6E;
+      --pink: #D57DB2;
+      --text: #1A1416;
+      --text-soft: #3A3036;
+      --border: rgba(45, 27, 48, 0.15);
+      --border-soft: rgba(45, 27, 48, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 44px;
+      min-height: 110px;
+      background-color: var(--purple-dark);
+      background-image: url('Assets/header-banner.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    nav .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav .logo svg {
+      height: 42px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav-links a {
+      color: var(--cream);
+      text-decoration: none;
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      transition: color 0.25s ease;
+      position: relative;
+    }
+
+    .nav-links a::before {
+      content: '\2190';
+      display: inline-block;
+      margin-right: 0.5em;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-links a:hover::before {
+      transform: translateX(-3px);
+    }
+
+    .nav-links a:hover {
+      color: var(--pink);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 72px 32px 96px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(44px, 6.5vw, 68px);
+      font-weight: 400;
+      color: var(--purple-dark);
+      letter-spacing: -0.01em;
+      line-height: 1.05;
+      margin-bottom: 56px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--purple-light);
+      font-weight: 300;
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple-light);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin: 56px 0 28px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 18px;
+      color: var(--text);
+    }
+
+    p strong {
+      color: var(--purple-dark);
+      font-weight: 600;
+    }
+
+    .caps-block {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      line-height: 1.9;
+      letter-spacing: 0.02em;
+      color: var(--text-soft);
+      padding: 22px 26px;
+      background: rgba(45, 27, 48, 0.035);
+      border-left: 2px solid var(--purple-dark);
+      margin: 28px 0;
+    }
+
+    .caps-block strong {
+      color: var(--purple-dark);
+    }
+
+    ol.restrictions {
+      list-style: none;
+      counter-reset: item;
+      margin-top: 24px;
+    }
+
+    ol.restrictions > li {
+      counter-increment: item;
+      position: relative;
+      padding-left: 44px;
+      margin-bottom: 24px;
+    }
+
+    ol.restrictions > li::before {
+      content: counter(item, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 4px;
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple-light);
+      letter-spacing: 0.08em;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-soft);
+      padding: 40px 32px;
+      text-align: center;
+      color: var(--text-soft);
+      background: var(--cream-dim);
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 20px;
+    }
+
+    footer a {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      color: var(--purple-dark);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    footer a:hover {
+      color: var(--purple-light);
+    }
+
+    footer .copyright {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      opacity: 0.6;
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 20px 22px; min-height: 88px; }
+      nav .logo svg { height: 34px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 10px; letter-spacing: 0.12em; }
+      main { padding: 48px 22px 64px; }
+      h1 { font-size: 30px; margin-bottom: 36px; }
+      h2 { font-size: 12px; margin: 44px 0 20px; }
+      body { font-size: 15px; }
+      .caps-block { padding: 18px 20px; }
+      ol.restrictions > li { padding-left: 38px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://www.quantumbiology.xyz/" class="logo" aria-label="Quantum Biology DAO — Home">
+      <svg width="119" height="50" viewBox="0 0 119 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <path d="M63.41 12.2C63.41 13.33 63.15 14.23 62.72 14.95L63.6199 15.83L62.6699 16.78L61.83 15.95C61.13 16.5 60.24 16.78 59.31 16.78C57.12 16.78 55.2 15.26 55.2 12.2C55.2 9.14 57.12 7.62 59.31 7.62C61.5 7.62 63.4199 9.14 63.4199 12.2H63.41ZM60.7 12.93L61.66 13.9C61.86 13.44 61.9799 12.88 61.9799 12.2C61.9799 9.99 60.75 8.95 59.31 8.95C57.87 8.95 56.6399 9.99 56.6399 12.2C56.6399 14.41 57.87 15.45 59.31 15.45C59.87 15.45 60.4099 15.3 60.8499 14.96L59.7599 13.87L60.7099 12.92L60.7 12.93Z" fill="#EEE8DF"/>
+          <path d="M65.8899 7.71997H67.2999V13.52C67.2999 14.74 67.9099 15.45 69.1199 15.45C70.3299 15.45 70.9399 14.73 70.9399 13.52V7.71997H72.3499V13.45C72.3499 15.61 70.9599 16.78 69.1299 16.78C67.2999 16.78 65.9099 15.6 65.9099 13.45V7.71997H65.8899Z" fill="#EEE8DF"/>
+          <path d="M78.47 7.71997L81.58 16.68H80.15L79.41 14.45H76.21L75.47 16.68H74.04L77.15 7.71997H78.48H78.47ZM76.63 13.12H78.98L77.8 9.49997L76.62 13.12H76.63Z" fill="#EEE8DF"/>
+          <path d="M90.39 7.71997V16.68H88.88L85.21 10.26V16.68H83.8V7.71997H85.31L88.98 14.17V7.71997H90.39Z" fill="#EEE8DF"/>
+          <path d="M92.6301 7.71997H99.0501V9.04997H96.5401V16.68H95.1301V9.04997H92.6201V7.71997H92.6301Z" fill="#EEE8DF"/>
+          <path d="M101.47 7.71997H102.88V13.52C102.88 14.74 103.49 15.45 104.7 15.45C105.91 15.45 106.52 14.73 106.52 13.52V7.71997H107.93V13.45C107.93 15.61 106.54 16.78 104.71 16.78C102.88 16.78 101.49 15.6 101.49 13.45V7.71997H101.47Z" fill="#EEE8DF"/>
+          <path d="M110.83 7.71997H112.49L114.72 13.68L116.95 7.71997H118.61V16.68H117.2V10.64L115.22 15.86H114.22L112.24 10.64V16.68H110.83V7.71997Z" fill="#EEE8DF"/>
+          <path d="M58.92 20.52C60.4 20.52 61.43 21.31 61.43 22.86C61.43 23.55 61.05 24.31 60.52 24.59C61.36 24.95 61.89 25.81 61.89 26.84C61.89 28.52 60.84 29.48 59.08 29.48H55.75V20.52H58.92ZM57.15 21.85V24.05H58.79C59.58 24.05 60.02 23.68 60.02 22.95C60.02 22.22 59.58 21.85 58.79 21.85H57.15ZM57.15 25.38V28.14H58.88C59.92 28.14 60.45 27.65 60.45 26.76C60.45 25.87 59.91 25.38 58.88 25.38H57.15Z" fill="#EEE8DF"/>
+          <path d="M64.3601 20.52H65.7701V29.48H64.3601V20.52Z" fill="#EEE8DF"/>
+          <path d="M76.5401 25C76.5401 28.06 74.6201 29.58 72.4301 29.58C70.2401 29.58 68.3201 28.06 68.3201 25C68.3201 21.94 70.2401 20.42 72.4301 20.42C74.6201 20.42 76.5401 21.94 76.5401 25ZM69.7601 25C69.7601 27.21 70.9901 28.25 72.4301 28.25C73.8701 28.25 75.1001 27.21 75.1001 25C75.1001 22.79 73.8701 21.75 72.4301 21.75C70.9901 21.75 69.7601 22.79 69.7601 25Z" fill="#EEE8DF"/>
+          <path d="M80.37 20.52V28.15H84.23V29.48H78.96V20.52H80.37Z" fill="#EEE8DF"/>
+          <path d="M94.02 25C94.02 28.06 92.1 29.58 89.91 29.58C87.72 29.58 85.8 28.06 85.8 25C85.8 21.94 87.72 20.42 89.91 20.42C92.1 20.42 94.02 21.94 94.02 25ZM87.24 25C87.24 27.21 88.47 28.25 89.91 28.25C91.35 28.25 92.58 27.21 92.58 25C92.58 22.79 91.35 21.75 89.91 21.75C88.47 21.75 87.24 22.79 87.24 25Z" fill="#EEE8DF"/>
+          <path d="M102.71 28.36C102.39 28.91 101.62 29.58 100.36 29.58C98.26 29.58 96.29 28.15 96.29 25C96.29 21.85 98.29 20.42 100.44 20.42C102.36 20.42 103.65 21.57 104.01 23.18L102.72 23.58C102.29 22.34 101.5 21.75 100.44 21.75C98.9 21.75 97.73 22.82 97.73 25C97.73 27.18 98.91 28.25 100.44 28.25C101.85 28.25 102.53 27.29 102.64 26.2H100.9V24.96H104.05V29.48H102.82L102.72 28.37L102.71 28.36Z" fill="#EEE8DF"/>
+          <path d="M107.04 20.52L108.81 24.24L110.58 20.52H112.08L109.52 25.64V29.48H108.11V25.64L105.55 20.52H107.05H107.04Z" fill="#EEE8DF"/>
+          <path d="M58.38 33.3199C60.53 33.3199 62.5 34.7799 62.5 37.7999C62.5 40.8199 60.53 42.2799 58.38 42.2799H55.74V33.3199H58.38ZM57.15 34.6499V40.9499H57.97C59.53 40.9499 61.07 40.2499 61.07 37.7999C61.07 35.3499 59.53 34.6499 57.97 34.6499H57.15Z" fill="#EEE8DF"/>
+          <path d="M68.3599 33.3199L71.4699 42.2799H70.0399L69.2999 40.0499H66.0999L65.3599 42.2799H63.9299L67.0399 33.3199H68.3699H68.3599ZM66.5199 38.7199H68.8699L67.6899 35.0999L66.5099 38.7199H66.5199Z" fill="#EEE8DF"/>
+          <path d="M81.3499 37.8C81.3499 40.86 79.4299 42.38 77.2399 42.38C75.0499 42.38 73.1299 40.86 73.1299 37.8C73.1299 34.74 75.0499 33.22 77.2399 33.22C79.4299 33.22 81.3499 34.74 81.3499 37.8ZM74.5699 37.8C74.5699 40.01 75.7999 41.05 77.2399 41.05C78.6799 41.05 79.9099 40.01 79.9099 37.8C79.9099 35.59 78.6799 34.55 77.2399 34.55C75.7999 34.55 74.5699 35.59 74.5699 37.8Z" fill="#EEE8DF"/>
+          <path d="M38.0901 40.69L37.3301 39.37L41.9901 36.68V31.62H43.5101V37.12C43.5101 37.39 43.3601 37.64 43.1301 37.78L38.0901 40.69Z" fill="#EEE8DF"/>
+          <path d="M21.75 50C21.62 50 21.49 49.97 21.37 49.9L0.38 37.78C0.14 37.64 0 37.39 0 37.12V12.88C0 12.61 0.15 12.36 0.38 12.22L21.37 0.0999951C21.61 -0.0400049 21.9 -0.0400049 22.13 0.0999951L43.12 12.22C43.36 12.36 43.5 12.61 43.5 12.88V27H41.98V13.32L21.75 1.64L1.52 13.32V36.68L21.75 48.36L33.37 41.65L34.13 42.97L22.13 49.9C22.01 49.97 21.88 50 21.75 50Z" fill="#EEE8DF"/>
+          <path d="M19.23 42.34C18.67 42.34 18.1 42.19 17.59 41.89L8.40003 36.58C6.32003 35.38 5.03003 33.15 5.03003 30.75V28.97C5.03003 27.34 5.86003 25.85 7.24003 24.99L8.58003 24.15C9.51003 23.57 10.07 22.56 10.07 21.46C10.07 19.48 11.14 17.63 12.85 16.64L20.17 12.42C20.67 12.13 20.98 11.59 20.98 11.01V10.94C20.98 10.3 20.65 9.72996 20.1 9.40996C19.55 9.08996 18.89 9.08996 18.35 9.40996L9.16003 14.72C7.55003 15.65 6.56003 17.38 6.56003 19.23V20.74H5.04003V19.23C5.04003 16.83 6.33003 14.6 8.41003 13.4L17.6 8.08996C18.63 7.49996 19.85 7.49996 20.88 8.08996C21.91 8.67996 22.52 9.74996 22.52 10.94V11.01C22.52 12.13 21.92 13.18 20.95 13.74L13.63 17.96C12.38 18.68 11.61 20.02 11.61 21.46C11.61 23.09 10.78 24.58 9.40003 25.44L8.06003 26.28C7.13003 26.86 6.57003 27.87 6.57003 28.97V30.75C6.57003 32.61 7.57003 34.33 9.17003 35.26L18.36 40.57C18.91 40.89 19.57 40.89 20.11 40.57C20.66 40.25 20.99 39.68 20.99 39.04V38.97C20.99 38.39 20.68 37.85 20.18 37.56L15.92 35.1L16.68 33.78L20.94 36.24C21.91 36.8 22.52 37.85 22.52 38.97V39.04C22.52 40.23 21.91 41.3 20.88 41.89C20.37 42.19 19.8 42.33 19.24 42.33L19.23 42.34Z" fill="#D57DB2"/>
+          <path d="M21.7501 32.54C21.6201 32.54 21.4901 32.51 21.3701 32.44L15.5001 29.05C15.2601 28.91 15.1201 28.66 15.1201 28.39V21.61C15.1201 21.34 15.2701 21.09 15.5001 20.95L21.3701 17.56C21.6101 17.42 21.9001 17.42 22.1301 17.56L28.0001 20.95C28.2401 21.09 28.3801 21.34 28.3801 21.61V28.39C28.3801 28.66 28.2301 28.91 28.0001 29.05L22.1301 32.44C22.0101 32.51 21.8801 32.54 21.7501 32.54ZM16.6401 27.95L21.7501 30.9L26.8601 27.95V22.05L21.7501 19.1L16.6401 22.05V27.95Z" fill="#EEE8DF"/>
+          <path d="M28.0071 27.7359L27.2471 29.0522L41.9955 37.5672L42.7555 36.2509L28.0071 27.7359Z" fill="#EEE8DF"/>
+          <path d="M11.3699 31.53C10.7099 31 10.1799 31 10.1799 30.34C10.1799 29.68 10.7099 29.15 11.3699 29.15C12.0299 29.15 12.5599 29.68 12.5599 30.34C12.5599 31 12.0299 31.53 11.3699 31.53Z" fill="#EEE8DF"/>
+          <path d="M28.32 15.71C26.87 15.71 25.7 14.53 25.7 13.09C25.7 11.65 26.88 10.47 28.32 10.47C29.76 10.47 30.94 11.65 30.94 13.09C30.94 14.53 29.76 15.71 28.32 15.71ZM28.32 11.99C27.7099 11.99 27.2199 12.48 27.2199 13.09C27.2199 13.7 27.7099 14.19 28.32 14.19C28.93 14.19 29.42 13.7 29.42 13.09C29.42 12.48 28.93 11.99 28.32 11.99Z" fill="#EEE8DF"/>
+          <path d="M28.3199 39.27C26.7199 39.27 25.4199 37.97 25.4199 36.37C25.4199 34.77 26.7199 33.47 28.3199 33.47C29.9199 33.47 31.2199 34.77 31.2199 36.37C31.2199 37.97 29.9199 39.27 28.3199 39.27ZM28.3199 34.99C27.5599 34.99 26.9399 35.61 26.9399 36.37C26.9399 37.13 27.5599 37.75 28.3199 37.75C29.0799 37.75 29.6999 37.13 29.6999 36.37C29.6999 35.61 29.0799 34.99 28.3199 34.99Z" fill="#EEE8DF"/>
+          <path d="M35.1899 27.7599C34.7399 27.7599 34.2899 27.6699 33.8599 27.4799C32.6699 26.9599 31.9099 25.7799 31.9099 24.4799V20.1599C31.9099 18.9899 32.5399 17.8999 33.5499 17.3199C34.5799 16.7299 35.7999 16.7299 36.8299 17.3199C37.8599 17.9099 38.4699 18.9799 38.4699 20.1599V24.4799C38.4699 25.5899 37.9099 26.6199 36.9799 27.2299C36.4399 27.5799 35.8199 27.7599 35.1899 27.7599ZM34.3099 18.6299C33.7699 18.9399 33.4299 19.5299 33.4299 20.1499V24.4699C33.4299 25.1699 33.8399 25.7999 34.4799 26.0799C35.0299 26.3199 35.6399 26.2799 36.1499 25.9499C36.6599 25.6199 36.9499 25.0799 36.9499 24.4799V20.1599C36.9499 19.5199 36.6199 18.9599 36.0699 18.6399C35.5199 18.3199 34.8599 18.3199 34.3099 18.6399V18.6299Z" fill="#D57DB2"/>
+        </g>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="https://www.quantumbiology.xyz/">Back to quantumbiology.xyz</a>
+      <a href="http://quantumbiology.community" target="_blank" rel="noopener">Back to Discord</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>QBIO Token Disclaimer</h1>
+
+    <h2>Legal Disclaimer</h2>
+
+    <p><strong>PLEASE CONSULT YOUR LEGAL AND FINANCIAL ADVISORS BEFORE CONSIDERING PARTICIPATING IN ANY TOKEN ACQUISITION.</strong></p>
+
+    <p>If you decide to acquire QBIO tokens, please note that your payment or contribution does not represent, constitute, or involve the exchange of cryptocurrencies for any form of securities, investment units, or ordinary shares in any project, platform, company, or other entity.</p>
+
+    <p>The QBIO token is not intended to constitute a security or collective investment unit in any project, platform, association, company, or entity of any kind.</p>
+
+    <p>Holders do not receive any form of dividend or other revenue rights, nor does holding QBIO represent participation in a profit-sharing scheme.</p>
+
+    <p>QBIO is not intended to be used as a means of payment or currency.</p>
+
+    <p>QBIO is a governance token. Its sole purpose is to enable participation in QBIO DAO decision-making. Any functionalities of the token, including governance utilities or similar, are based on decentralized and subject-to-change programmatic systems. There is no right, claim, guarantee, or assurance regarding any such functionalities.</p>
+
+    <div class="caps-block">
+      QBIO DAO MAKES NO WARRANTY OR REPRESENTATION, WHATSOEVER, WITH RESPECT TO THE QBIO TOKEN AND ITS NATURE, INCLUDING BUT NOT LIMITED TO ANY (i) WARRANTY OF MERCHANTABILITY; (ii) WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE; (iii) WARRANTY OF TITLE; OR (iv) WARRANTY AGAINST INFRINGEMENT OF INTELLECTUAL PROPERTY RIGHTS OF A THIRD PARTY; WHETHER ARISING BY LAW, COURSE OF DEALING, COURSE OF PERFORMANCE, USAGE OF TRADE, OR OTHERWISE. THE HOLDER ACKNOWLEDGES THAT THEY HAVE NOT RELIED UPON ANY REPRESENTATION OR WARRANTY MADE BY QBIO DAO OR ANY OTHER PERSON ON ITS BEHALF.
+    </div>
+
+    <h2>Holder Representations</h2>
+
+    <p>The Holder has been advised that QBIO has not been registered under any country's securities laws and therefore cannot be transferred or resold in any jurisdiction where such registration would be required.</p>
+
+    <p>The Holder is acquiring QBIO for their own account, not as a nominee or agent, and not with a view to distribution or resale thereof, and has no present intention of selling or otherwise distributing the same.</p>
+
+    <p>The Holder has such knowledge and experience in financial and business matters that they are capable of evaluating the merits and risks of holding QBIO, is able to incur a complete loss without impairing their financial condition, and is able to bear the economic risk for an indefinite period of time.</p>
+
+    <p>The Holder represents that they have satisfied themselves as to the full observance of the laws of their jurisdiction in connection with holding QBIO, including (i) the legal requirements within their jurisdiction; (ii) any foreign exchange restrictions; (iii) any governmental or other consents that may need to be obtained; and (iv) any income tax or other tax consequences that may be relevant.</p>
+
+    <p>Holding QBIO will not violate any applicable laws of the Holder's jurisdiction.</p>
+
+    <p>The Holder understands that holding QBIO involves significant risks, including but not limited to the risk that (i) the technology associated with the network or the tokens will not function as intended; (ii) the network and the tokens will fail to attract sufficient interest; and (iii) QBIO DAO, its affiliates, the network, or the tokens may be subject to investigation or punitive actions from governmental authorities. The Holder is financially sophisticated and capable of fully evaluating the merits and risks, and agrees to bear such risks.</p>
+
+    <div class="caps-block">
+      THE HOLDER UNDERSTANDS AND EXPRESSLY ACCEPTS THAT QBIO TOKENS ARE PROVIDED ON AN "AS IS," "UNDER DEVELOPMENT," AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND.
+    </div>
+
+    <p>Any information related to QBIO and/or QBIO DAO is not to be construed as business, investment, legal, tax, or other advice. Such information is of a general nature, does not purport to contain all information a specific individual may require, and anyone interacting with QBIO and/or QBIO DAO should conduct their own research and consult professional advisors where needed. No such information constitutes a solicitation, recommendation, or offer to purchase or obtain QBIO.</p>
+
+    <p>The Holder bears sole responsibility for any taxes arising from the acquisition, ownership, use, sale, or other disposition of QBIO tokens.</p>
+
+    <p>The Holder agrees to indemnify, defend, and hold QBIO DAO, its affiliates, contributors, advisors, and agents harmless from any claim, liability, assessment, or penalty, including with respect to any taxes associated with or arising from the Holder's acquisition or ownership of QBIO.</p>
+
+    <h2>Restrictions on Participation</h2>
+
+    <p>The following restrictions apply to holding and participating in the governance of QBIO DAO via the QBIO token, in addition to any other restrictions under applicable law:</p>
+
+    <ol class="restrictions">
+      <li>QBIO may not be held by, offered, or sold to "U.S. persons" (within the meaning of Rule 902 of Regulation S promulgated under the U.S. Securities Act of 1933, as amended), or within the United States of America, unless subsequently registered under applicable securities laws or an exemption from registration is available.</li>
+      <li>No individual, entity, or beneficial owner who is a Prohibited Person may own, buy, or sell QBIO. For these purposes, "Prohibited Person" means any person or entity that is: (i) a national or resident of, or entity incorporated under the laws of, any U.S. embargoed or restricted country; (ii) a national or resident of, or entity incorporated under the laws of, Cuba, North Korea, Iran, Libya, China, South Sudan, Sudan, Syria, or Crimea; (iii) included on the U.S. Commerce Department's Denied Persons List, Entities List, or Unverified List; the U.S. Treasury's Specially Designated Nationals list; the Department of State's Debarred List; or UN Sanctions lists; (iv) otherwise restricted by a U.S. Governmental Authority; or (v) subject to economic sanctions administered by Switzerland, the United Nations, the European Union, or the United Kingdom.</li>
+    </ol>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.quantumbiology.xyz/">quantumbiology.xyz</a>
+      <a href="http://quantumbiology.community" target="_blank" rel="noopener">Discord</a>
+      <a href="https://x.com/QuantumBioDAO" target="_blank" rel="noopener">X / Twitter</a>
+    </div>
+    <div class="copyright">© 2026 Quantum Biology DAO</div>
+  </footer>
+
+</body>
+</html>
