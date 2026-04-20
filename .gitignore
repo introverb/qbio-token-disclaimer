@@ -2,3 +2,6 @@ desktop.ini
 .DS_Store
 Thumbs.db
 *.tmp
+
+# QBIO Report project lives in its own repo (QBIO NEWS/.git)
+QBIO NEWS/
